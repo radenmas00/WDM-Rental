@@ -1,0 +1,356 @@
+<?php $this->layout('template', ['hal'=>'Trip']) ?>
+<?php
+	$module = "packages";
+	switch($act){
+        case "list":
+?>
+
+<a href="packages-add" class="btn btn-primary"> <i class="fa fa-plus"></i> Tambah Data</a>
+
+<br><br>
+<div class="table-responsive">
+    <table id="my_table" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Kategori</th>
+                <th>Gambar</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+				$no 	= 1;
+				foreach($dataku as $row) :
+            ?>
+            <tr>
+                <td><?php echo $no ?></td>
+                <td><?php echo $row['judul'] ?></td>
+                <td><?php echo $row['kategori'] ?></td>
+                <td><img src="<?= ($row['gambar'] != '') ? '../images/packages/'.$row['gambar'] : '../images/packages/default.jpg'?>"
+                        style="width:100px;margin:0 auto;display:block">
+                </td>
+                <td style="width:19%"><a href="packages-edit-<?php echo $row['id_packages'] ?>"
+                        class="btn btn-warning "> <i class="fas fa-pencil-alt"></i> Edit</a>
+                    <a onClick="javascript: return confirm('Yakin untuk Menghapus data ?');"
+                        href="<?php echo $module; ?>-delete-<?php echo $row['id_packages']; ?>" class="btn btn-danger "
+                        role="button" aria-pressed="true" style="min-width: 60px;"> <i class="fa fa-trash"></i>
+                        Delete</a>
+                </td>
+            </tr>
+            <?php 
+			    $no++;
+				endforeach
+			?>
+        </tbody>
+    </table>
+</div>
+<?php
+		break;
+		case "add":
+?>
+<div class="card">
+    <div class="card-body">
+        <form action="packages" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Nama</label>
+                        <input type="text" class="form-control" name="nama" required>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="">Urutan</label>
+                        <input type="number" class="form-control" name="urutan">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="">Kategori</label>
+                        <select class="form-control" name="id_produk_kategori">
+                            <option value="">-- Pilih Kategori --</option>
+                            <?php
+                                foreach($kategori as $row) :
+                            ?>
+                            <option value="<?= $row['id_produk_kategori'] ?>"><?= $row['judul'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Vacation Area</label>
+                        <input type="text" class="form-control" name="vacation_type">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="">Lama</label>
+                        <input type="text" class="form-control" name="lama">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Overview</label>
+                        <textarea id="ckeditor2" class="ckeditor2" name="deskripsi"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Travel Plan</label>
+                        <textarea id="ckeditor" class="ckeditor2" name="travel_plan"></textarea>
+                    </div>
+                </div>
+                
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">About This Package</label>
+                        <textarea id="cksimple" class="cksimple" name="about"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Gambar</label>
+                        <input type="file" class="form-control" name="lopoFile" required>
+                        <small style="color:red">*) ukuran minimal 150 x 150 px</small>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <p class="alert alert-warning">SEO (Search Engine Optimation)</p>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab"><span
+                                    class="hidden-sm-up"><i class="sl-icon-key"></i></span>
+                                <span class="hidden-xs-down">Keyword</span></a> </li>
+                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><span
+                                    class="hidden-sm-up"><i class="sl-icon-list"></i></span>
+                                <span class="hidden-xs-down">Description</span></a> </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content tabcontent-border">
+                        <div class="tab-pane active" id="home" role="tabpanel">
+                            <div class="p-20">
+                                <textarea rows="4" name="keyword" class="form-control"
+                                    placeholder="SEO Keyword"></textarea>
+                            </div>
+                        </div>
+                        <div class="tab-pane  p-20" id="profile" role="tabpanel">
+                            <textarea rows="4" name="description" class="form-control"
+                                placeholder="SEO Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" id="btn-packages" class="btn btn-primary"><i class="fa fa-paper-plane"></i>
+                        Simpan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<?php
+	break;
+	case "edit":
+?>
+<div class="card">
+    <div class="card-body">
+        <form action="packages" id="form-packages" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id_packages" value="<?php echo $data['id_packages'] ?>">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Nama</label>
+                        <input type="text" class="form-control" name="nama" value="<?php echo $data['judul'] ?>">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="">Urutan</label>
+                        <input type="number" class="form-control" name="urutan" value="<?php echo $data['urutan'] ?>">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="">Kategori</label>
+                        <select class="form-control" name="id_produk_kategori">
+                            <option value="">-- Pilih Kategori --</option>
+                            <?php
+                                foreach($kategori as $row) :
+                            ?>
+                            <option value="<?= $row['id_produk_kategori'] ?>"
+                                <?=($data['id_produk_kategori'] == $row['id_produk_kategori']  )? 'selected' : ''?>>
+                                <?= $row['judul'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Vacation Area</label>
+                        <input type="text" class="form-control" name="vacation_type"
+                            value="<?php echo $data['vacation_type'] ?>">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="">Lama</label>
+                        <input type="text" class="form-control" name="lama" value="<?php echo $data['lama'] ?>">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Gambar </label>
+                        <!--<p><?php echo $data['gambar'] ?></p>-->
+                        <input type="file" class="form-control" name="lopoFile">
+                        <div class="" id="img-lopo">
+                            <img style="height:200px" src="../images/packages/<?php echo $data['gambar'] ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Overview</label>
+                        <textarea id="ckeditor3" class="ckeditor2"
+                            name="deskripsi"><?php echo $data['deskripsi'] ?></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Travel Plan</label>
+                        <textarea id="ckeditor" class="ckeditor2"
+                            name="travel_plan"><?php echo $data['travel_plan'] ?></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">About This Package</label>
+                        <textarea id="cksimple" class="cksimple" name="about"><?php echo $data['about'] ?></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin-bottom:10px">
+                    <div class="box-body table-responsive"
+                        style="border: 1px solid #bfbfbf;min-height: 300px;padding:10px">
+                        <label for="exampleInputFile" id="gallery_packages">Gambar Lainnya</label><br>
+                        <a href="packages-addgallery-<?=$data['id_packages']?>" class="btn btn-info">Tambah Gambar</a>
+                        <div class="form-group">
+                            <div class="row">
+                                <?php
+                                    foreach($gallery as $tsubpro):
+                                ?>
+                                <div class="col-md-2 col-xs-12"
+                                    style="height: 200px;overflow: hidden;margin: 10px 0px;">
+                                    <div class="photo" style="margin-bottom:10px">
+                                        <a href="#"
+                                            style="width: 100%; height: 150px;overflow: hidden;float: left;overflow: hidden;">
+                                            <img src="../images/gallery_packages/<?php echo "$imgname1-$tsubpro[gambar]"; ?>"
+                                                style="width: 100%; min-height: 150px;overflow: hidden;">
+                                        </a>
+                                    </div>
+                                    <br />
+                                    <a style="margin-top:10px" class="btn btn-warning"
+                                        href="<?php echo $module; ?>-editgallery-<?php echo $tsubpro['id_gallery']; ?>">Edit</a>
+                                    |
+                                    <a style="margin-top:10px" class="btn btn-danger"
+                                        onClick="javascript: return confirm('Data yang Sudah di Hapus TIDAK BISA Dikembalikan Kembali. Apakah Anda yakin ingin Menghapus Data Ini!!');"
+                                        href='packages-gallery-delete-<?php echo $tsubpro['id_gallery']; ?>-<?php echo $data['id_packages']; ?>'>Hapus</a>
+                                </div>
+                                <?php
+                                   endforeach;
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="alert alert-primary" role="alert">
+                        <div class="d-flex align-items-center justify-content-start">
+                            <i class="icon ion-ios-information alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                            <span><strong>SEO (Search Engine Optimation)</strong></span>
+                        </div><!-- d-flex -->
+                    </div><!-- alert -->
+
+                    <!-- Tab panes -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="desc-tab" data-toggle="tab" href="#desc" role="tab"
+                                aria-controls="desc" aria-selected="true">Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="keyword-tab" data-toggle="tab" href="#keyword" role="tab"
+                                aria-controls="profile" aria-selected="false">Keyword</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="desc" role="tabpanel" aria-labelledby="desc-tab">
+                            <textarea rows="4" name="description" class="form-control"
+                                placeholder="SEO Description"><?php echo $data['description'] ?></textarea>
+                        </div>
+                        <div class="tab-pane fade" id="keyword" role="tabpanel" aria-labelledby="keyword-tab">
+                            <textarea rows="4" name="keyword" class="form-control"
+                                placeholder="SEO Keyword"><?php echo $data['keyword'] ?></textarea>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="btn-packages" class="btn btn-primary" value="Simpan Data">
+            </div>
+        </form>
+    </div>
+</div>
+<?php
+    break;
+	case "addgallery":
+?>
+<form action="packages-gallery" method="POST"
+    enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-12 card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>nama</label>
+                    <input type="text" class="form-control" name="judul">
+                </div>
+                <div class="form-group ">
+                    <input type="hidden" name="id_packages" value="<?php echo $id ?>">
+                    <label for="">Gambar</label>
+                    <input type="file" name="nyanpload" class="form-control">
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-info" value="Simpan Data">
+    </div>
+</form>
+<?php
+    break;
+	case "editgallery":
+?>
+<form action="packages-gallery" method="POST"
+    enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-12 card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>nama</label>
+                    <input type="text" class="form-control" name="judul" value="<?php echo $data['judul'] ?>">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="id" value="<?php echo $data['id_gallery'] ?>">
+                    <input type="hidden" name="idm" value="<?php echo $data['id_packages']; ?>">
+                    <label for="">Gambar</label>
+                    <input type="file" name="nyanpload" class="form-control">
+                    <br><br>
+                    <img style="height:300px"
+                        src="../images/gallery_packages/<?php echo $imgname1."-".$data['gambar']?>">
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-info" value="Simpan Data">
+    </div>
+</form>
+<?php
+		break;  
+	}
+?>

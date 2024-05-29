@@ -1,0 +1,159 @@
+[09-Jan-2023 05:05:11 UTC] PHP Notice:  Undefined index: id_process_sub in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/modul/process/index.php on line 426
+[09-Jan-2023 05:05:11 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/modul/process/index.php:440
+Stack trace:
+#0 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Template/Template.php(164): include()
+#1 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Engine.php(277): League\Plates\Template\Template->render(Array)
+#2 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/router.php(1074): League\Plates\Engine->render('modul/process/i...', Array)
+#3 [internal function]: {closure}('1')
+#4 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array(Object(Closure), Array)
+#5 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke(Object(Closure), Array)
+#6 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle( in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/modul/process/index.php on line 440
+[09-Jan-2023 05:06:48 UTC] PHP Notice:  Undefined index: id_process_sub in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/modul/process/index.php on line 426
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Undefined variable: header in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 4
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 4
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 7
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 10
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 197
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 200
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 201
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 202
+[09-Jan-2023 05:59:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 204
+[09-Jan-2023 08:29:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/index.php:190
+Stack trace:
+#0 [internal function]: {closure}('tenaga-kerja-ba...', '1')
+#1 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array(Object(Closure), Array)
+#2 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke(Object(Closure), Array)
+#3 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle(Array, true)
+#4 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/index.php(846): Bramus\Router\Router->run()
+#5 {main}
+  thrown in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/index.php on line 190
+[09-Jan-2023 08:29:52 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:29:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:29:52 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:29:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:29:52 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[09-Jan-2023 08:29:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[09-Jan-2023 08:30:04 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:30:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:30:04 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:30:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:30:04 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[09-Jan-2023 08:30:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[09-Jan-2023 08:30:06 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:30:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:30:06 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:30:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:30:06 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[09-Jan-2023 08:30:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[09-Jan-2023 08:30:15 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:30:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 4
+[09-Jan-2023 08:30:15 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:30:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 7
+[09-Jan-2023 08:30:15 UTC] PHP Notice:  Undefined variable: data in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[09-Jan-2023 08:30:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/form-pendaftaran.php on line 10
+[10-Jan-2023 05:19:29 UTC] PHP Notice:  Undefined variable: base_url in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/router.php on line 1781
+[10-Jan-2023 05:19:29 UTC] PHP Fatal error:  Uncaught LogicException: The template "modul/process_kat/index" could not be found at "app/admin/modul/process_kat/index.php". in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Template/Template.php:155
+Stack trace:
+#0 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Engine.php(277): League\Plates\Template\Template->render(Array)
+#1 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/router.php(1095): League\Plates\Engine->render('modul/process_k...', Array)
+#2 [internal function]: {closure}('1')
+#3 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array(Object(Closure), Array)
+#4 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke(Object(Closure), Array)
+#5 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle(Array, true)
+#6 /home/priimato in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Template/Template.php on line 155
+[10-Jan-2023 05:19:44 UTC] PHP Fatal error:  Uncaught LogicException: The template "modul/process_kat/index" could not be found at "app/admin/modul/process_kat/index.php". in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Template/Template.php:155
+Stack trace:
+#0 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Engine.php(277): League\Plates\Template\Template->render(Array)
+#1 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/router.php(1095): League\Plates\Engine->render('modul/process_k...', Array)
+#2 [internal function]: {closure}('1')
+#3 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array(Object(Closure), Array)
+#4 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke(Object(Closure), Array)
+#5 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle(Array, true)
+#6 /home/priimato in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/league/plates/src/Template/Template.php on line 155
+[10-Jan-2023 05:20:30 UTC] PHP Notice:  Undefined variable: id_process_kat in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/admin/modul/process/aksi.php on line 263
+[10-Jan-2023 05:25:26 UTC] PHP Notice:  Undefined variable: header in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 4
+[10-Jan-2023 05:25:26 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 4
+[10-Jan-2023 05:25:26 UTC] PHP Notice:  Undefined index: deskripsi in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 36
+[10-Jan-2023 05:25:26 UTC] PHP Notice:  Undefined index: deskripsi in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/mainTraining.php on line 36
+[10-Jan-2023 05:25:26 UTC] PHP Notice:  Undefined index: keyword in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 201
+[10-Jan-2023 05:25:26 UTC] PHP Notice:  Undefined index: description in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 202
+[10-Jan-2023 05:25:31 UTC] PHP Notice:  Undefined index: deskripsi in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 210
+[10-Jan-2023 05:25:31 UTC] PHP Notice:  Undefined index: keyword in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 214
+[10-Jan-2023 05:25:31 UTC] PHP Notice:  Undefined index: description in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 215
+[10-Jan-2023 05:31:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetchAll() on bool in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/index.php:290
+Stack trace:
+#0 [internal function]: {closure}('tenaga-kerja-ba...', '1')
+#1 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array(Object(Closure), Array)
+#2 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke(Object(Closure), Array)
+#3 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle(Array, true)
+#4 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/index.php(896): Bramus\Router\Router->run()
+#5 {main}
+  thrown in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/index.php on line 290
+[10-Jan-2023 05:32:17 UTC] PHP Notice:  Undefined variable: header in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/dettraining.php on line 141
+[10-Jan-2023 05:32:17 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/dettraining.php on line 141
+[10-Jan-2023 05:32:17 UTC] PHP Notice:  Undefined index: deskripsi in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 210
+[10-Jan-2023 05:32:17 UTC] PHP Notice:  Undefined index: keyword in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 214
+[10-Jan-2023 05:32:17 UTC] PHP Notice:  Undefined index: description in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/app/seo.php on line 215
+[10-Jan-2023 08:43:07 UTC] PHP Notice:  Undefined index: email in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/system/helper_email.php on line 24
+[10-Jan-2023 08:43:07 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (to):  in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/system/PHPMailer/src/PHPMailer.php:1083
+Stack trace:
+#0 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/system/PHPMailer/src/PHPMailer.php(1005): PHPMailer\PHPMailer\PHPMailer->addOrEnqueueAnAddress('to', '', '')
+#1 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/system/helper_email.php(24): PHPMailer\PHPMailer\PHPMailer->addAddress('')
+#2 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/index.php(228): sendEmail(Array, Array, Array)
+#3 [internal function]: {closure}()
+#4 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(458): call_user_func_array(Object(Closure), Array)
+#5 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(440): Bramus\Router\Router->invoke(Object(Closure), Array)
+#6 /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle(A in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/system/PHPMailer/src/PHPMailer.php on line 1083
+[10-Jan-2023 08:43:34 UTC] PHP Notice:  Undefined index: subject in /home/priimato/DEMO2.JOGJAMEDIAWEB.COM/japang/system/helper_email.php on line 427
+[10-May-2023 03:22:48 UTC] PHP Notice:  Undefined variable: dataku in /home/updatejo/public_html/reicon/app/admin/router.php on line 1039
+[10-May-2023 03:22:48 UTC] PHP Notice:  Undefined variable: kategori in /home/updatejo/public_html/reicon/app/admin/modul/process/index.php on line 161
+[10-May-2023 03:22:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/updatejo/public_html/reicon/app/admin/modul/process/index.php on line 161
+[10-May-2023 03:22:48 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on null in /home/updatejo/public_html/reicon/app/admin/modul/process/index.php:215
+Stack trace:
+#0 /home/updatejo/public_html/reicon/vendor/league/plates/src/Template/Template.php(164): include()
+#1 /home/updatejo/public_html/reicon/vendor/league/plates/src/Engine.php(277): League\Plates\Template\Template->render(Array)
+#2 /home/updatejo/public_html/reicon/app/admin/router.php(1039): League\Plates\Engine->render('modul/process/i...', Array)
+#3 [internal function]: {closure}('1')
+#4 /home/updatejo/public_html/reicon/vendor/bramus/router/src/Bramus/Router/Router.php(388): call_user_func_array(Object(Closure), Array)
+#5 /home/updatejo/public_html/reicon/vendor/bramus/router/src/Bramus/Router/Router.php(370): Bramus\Router\Router->invoke(Object(Closure), Array)
+#6 /home/updatejo/public_html/reicon/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle(Array, true)
+#7 /home/updatejo/public_html/reicon/index.php(690): Bramus\Router\Rout in /home/updatejo/public_html/reicon/app/admin/modul/process/index.php on line 215
+[10-May-2023 03:23:35 UTC] PHP Notice:  Undefined variable: dataku in /home/updatejo/public_html/reicon/app/admin/router.php on line 1039
+[10-May-2023 03:23:35 UTC] PHP Notice:  Undefined variable: kategori in /home/updatejo/public_html/reicon/app/admin/modul/process/index.php on line 161
+[10-May-2023 03:23:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/updatejo/public_html/reicon/app/admin/modul/process/index.php on line 161
+[10-May-2023 03:37:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetchAll() on bool in /home/updatejo/public_html/reicon/index.php:192
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /home/updatejo/public_html/reicon/vendor/bramus/router/src/Bramus/Router/Router.php(388): call_user_func_array(Object(Closure), Array)
+#2 /home/updatejo/public_html/reicon/vendor/bramus/router/src/Bramus/Router/Router.php(370): Bramus\Router\Router->invoke(Object(Closure), Array)
+#3 /home/updatejo/public_html/reicon/vendor/bramus/router/src/Bramus/Router/Router.php(287): Bramus\Router\Router->handle(Array, true)
+#4 /home/updatejo/public_html/reicon/index.php(692): Bramus\Router\Router->run()
+#5 {main}
+  thrown in /home/updatejo/public_html/reicon/index.php on line 192
+[10-May-2023 03:38:02 UTC] PHP Notice:  Undefined variable: header in /home/updatejo/public_html/reicon/index.php on line 196
+[12-Jul-2023 09:02:46 UTC] PHP Deprecated:  Return type of PhpOption\Some::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/updatejo/public_html/rankaryaindonusa/vendor/phpoption/phpoption/src/PhpOption/Some.php on line 152
+[12-Jul-2023 09:02:46 UTC] PHP Deprecated:  Return type of PhpOption\None::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/updatejo/public_html/rankaryaindonusa/vendor/phpoption/phpoption/src/PhpOption/None.php on line 118
+[12-Jul-2023 09:02:46 UTC] PHP Warning:  session_name(): Session name cannot be changed after headers have already been sent in /home/updatejo/public_html/rankaryaindonusa/system/jogjamediaweb.php on line 4
+[12-Jul-2023 09:02:46 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/updatejo/public_html/rankaryaindonusa/system/jogjamediaweb.php on line 5
+[12-Jul-2023 09:02:46 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #3 ($limit) of type int is deprecated in /home/updatejo/public_html/rankaryaindonusa/system/helper_base.php on line 8
+[12-Jul-2023 09:02:46 UTC] PHP Warning:  Undefined global variable $_SESSION in /home/updatejo/public_html/rankaryaindonusa/system/flash_message.php on line 76
+[12-Jul-2023 09:02:46 UTC] PHP Fatal error:  Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, null given in /home/updatejo/public_html/rankaryaindonusa/system/flash_message.php:76
+Stack trace:
+#0 /home/updatejo/public_html/rankaryaindonusa/system/flash_message.php(76): array_key_exists('flash_messages', NULL)
+#1 /home/updatejo/public_html/rankaryaindonusa/system/jogjamediaweb.php(27): Plasticbrain\FlashMessages\FlashMessages->__construct()
+#2 /home/updatejo/public_html/rankaryaindonusa/index.php(26): require_once('/home/updatejo/...')
+#3 {main}
+  thrown in /home/updatejo/public_html/rankaryaindonusa/system/flash_message.php on line 76
+[26-Jul-2023 09:51:41 UTC] PHP Deprecated:  Return type of PhpOption\Some::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/updatejo/public_html/hidrorentcartourjogja/vendor/phpoption/phpoption/src/PhpOption/Some.php on line 152
+[26-Jul-2023 09:51:41 UTC] PHP Deprecated:  Return type of PhpOption\None::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/updatejo/public_html/hidrorentcartourjogja/vendor/phpoption/phpoption/src/PhpOption/None.php on line 118
+[26-Jul-2023 09:51:41 UTC] PHP Warning:  session_name(): Session name cannot be changed after headers have already been sent in /home/updatejo/public_html/hidrorentcartourjogja/system/jogjamediaweb.php on line 4
+[26-Jul-2023 09:51:41 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/updatejo/public_html/hidrorentcartourjogja/system/jogjamediaweb.php on line 5
+[26-Jul-2023 09:51:41 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #3 ($limit) of type int is deprecated in /home/updatejo/public_html/hidrorentcartourjogja/system/helper_base.php on line 8
+[26-Jul-2023 09:51:41 UTC] PHP Warning:  Undefined global variable $_SESSION in /home/updatejo/public_html/hidrorentcartourjogja/system/flash_message.php on line 76
+[26-Jul-2023 09:51:41 UTC] PHP Fatal error:  Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, null given in /home/updatejo/public_html/hidrorentcartourjogja/system/flash_message.php:76
+Stack trace:
+#0 /home/updatejo/public_html/hidrorentcartourjogja/system/flash_message.php(76): array_key_exists('flash_messages', NULL)
+#1 /home/updatejo/public_html/hidrorentcartourjogja/system/jogjamediaweb.php(27): Plasticbrain\FlashMessages\FlashMessages->__construct()
+#2 /home/updatejo/public_html/hidrorentcartourjogja/index.php(26): require_once('/home/updatejo/...')
+#3 {main}
+  thrown in /home/updatejo/public_html/hidrorentcartourjogja/system/flash_message.php on line 76
