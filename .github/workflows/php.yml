@@ -1,39 +1,27 @@
-name: PHP Composer
+name: PHP Code Quality Check // nama dari workflow
 
-on:
+on: // code dijalankan dengan pada saat
   push:
-    branches: [ "main" ]
+    branches: [ main ] // Workflow dijalankan setiap kali ada push ke branch (cabang) main
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ] // Workflow dijalankan setiap kali ada pull_request ke branch main
 
-permissions:
-  contents: read
+jobs: // pekerjaan yang akan dilakukan
+  phpcs: // Mengecek kualitas code php
+    name: Check PHP Code Quality // nama dari pekerjaan
+    runs-on: ubuntu-latest // menggunakan sistem operasi ubuntu
 
-jobs:
-  build:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
-
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v3
+    steps: // lamgah-langkahnya
+    - name: Checkout repository // nama langkah
+      uses: actions/checkout@v2 // memeriksa code dari repository
+      
+    - name: Setup PHP // nama langkah
+      uses: shivammathur/setup-php@v2
       with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+        php-version: '8.3' // memeriksa code di lingkungan php menggunakan php versi 8.3
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
+    - name: Install Composer dependencies // nama langkah
+      run: composer install --ignore-platform-req=ext-fileinfo --ignore-platform-req=ext-exif
+      // menginstall dependensi proyek dengan mengabaikan beberapa file
+    - name: Sabiru_Kelompok-1 // nama langkah
+      run: echo "Sabiru_RentalMobil" // menuliskan pesan
