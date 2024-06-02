@@ -24,4 +24,4 @@ jobs: // pekerjaan yang akan dilakukan
       run: composer install --ignore-platform-req=ext-fileinfo --ignore-platform-req=ext-exif
       // menginstall dependensi proyek dengan mengabaikan beberapa file
     - name: Sabiru_Kelompok-1 // nama langkah
-      run: echo "Sabiru_RentalMobil" // menuliskan pesan
+      run: echo "Sabiru_RentalMobil" // menuliskan pesan 
