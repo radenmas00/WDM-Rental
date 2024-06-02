@@ -1,0 +1,27 @@
+name: PHP Code Quality Check // nama dari workflow
+
+on: // code dijalankan dengan pada saat
+  push:
+    branches: [ main ] // Workflow dijalankan setiap kali ada push ke branch (cabang) main
+  pull_request:
+    branches: [ main ] // Workflow dijalankan setiap kali ada pull_request ke branch main
+
+jobs: // pekerjaan yang akan dilakukan
+  phpcs: // Mengecek kualitas code php
+    name: Check PHP Code Quality // nama dari pekerjaan
+    runs-on: ubuntu-latest // menggunakan sistem operasi ubuntu
+
+    steps: // lamgah-langkahnya
+    - name: Checkout repository // nama langkah
+      uses: actions/checkout@v2 // memeriksa code dari repository
+      
+    - name: Setup PHP // nama langkah
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3' // memeriksa code di lingkungan php menggunakan php versi 8.3
+
+    - name: Install Composer dependencies // nama langkah
+      run: composer install --ignore-platform-req=ext-fileinfo --ignore-platform-req=ext-exif
+      // menginstall dependensi proyek dengan mengabaikan beberapa file
+    - name: Sabiru_Kelompok-1 // nama langkah
+      run: echo "Sabiru_RentalMobil" // menuliskan pesan
